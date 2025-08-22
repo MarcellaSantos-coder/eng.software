@@ -1,5 +1,6 @@
+#Cria um dicionario para os usuários
 usuarios = {}
-
+#Este código é usado para cadastrar o usuário no sistema
 def cadastrar_usuario():
     nome = input("Digite o nome de usuário para o cadastro: ")
     if nome in usuarios:
@@ -9,7 +10,7 @@ def cadastrar_usuario():
         senha = input("Digite a senha: ")
         usuarios[nome] = senha
         print("Usuario cadastrado!")
-
+#Este entra no login 
 def fazer_login():
     nome = input("Digite seu usuario: ")
     senha = input("Digite sua senha: ")
@@ -18,7 +19,7 @@ def fazer_login():
 
     else:
         print("Usuario ou senha incorretos.")
-
+#Apaga o usuário do sistema, muito eficaz para aqueles que saem da empresa
 def apagar_usuario():
     nome = input("Digite o nome de usuário que irá apagar: ")
     if nome in usuarios:
@@ -32,7 +33,7 @@ def apagar_usuario():
     else:
         print("Usuário não encontrado. Verifique o login novamente.")
 
-
+#sistema de menu, para cada etapa do sistema acima
 while True:
     print("Menu")
     print("1-Cadastrar Usuário")
